@@ -10,7 +10,7 @@ This course deals with all things server-side. We base the entire course around 
 I have learnt from the course 
 
 - *Demonstrate an understanding of server-side concepts, CRUD and REST*
-- *Build and configure a backend server using NodeJS framework *
+- *Build and configure a backend server using NodeJS framework*
 - *Build a RESTful API for the front-end to access backend services*
 
 I would like to great thanks for Instructor **[Jogesh K. Muppala](https://www.coursera.org/instructor/jmuppala)** Associate Professor Department of Computer Science and Engineering...
