@@ -1,0 +1,2 @@
+sudo npm install -g express-generator@4.16.0
+express confusionServer
