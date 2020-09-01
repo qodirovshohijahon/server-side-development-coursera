@@ -1,2 +1,4 @@
 1 -  npm install express@4.16.3 --save
-2 -  
+2 -  npm install morgan@1.9.0 --save
+3 -  npm install body-parser@1.18.3 --save
+4 -  
