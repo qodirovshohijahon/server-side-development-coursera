@@ -1,6 +1,6 @@
 # sever-side-development-coursera
 
-This repository dedicated for course which I took [Server-side Development with NodeJS, Express and MongoDB
+This repository is dedicated for a course which I took [Server-side Development with NodeJS, Express and MongoDB
 The Hong Kong University of Science and Technology](https://www.coursera.org/learn/server-side-nodejs) from [Coursera.org](https://www.somewebsite.com)
 
 **About the course**
@@ -13,4 +13,4 @@ I have learnt from the course
 - *Build and configure a backend server using NodeJS framework*
 - *Build a RESTful API for the front-end to access backend services*
 
-I would like to say great thanks for Instructor **[Jogesh K. Muppala](https://www.coursera.org/instructor/jmuppala)** Associate Professor Department of Computer Science and Engineering...
+I would like to say great thanks for Instructor **[Jogesh K. Muppala](https://www.coursera.org/instructor/jmuppala)** Associate Professor Department of Computer Science and Engineering and [Coursera](https://www.coursera.org) Organizators...
