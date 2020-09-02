@@ -1,0 +1,21 @@
+{
+  "name": "First dish",
+  "image": "images/smth.png",
+  "category": "mains",
+  "label": "Mot",
+  "price": "4.99",
+  "featured": "true",
+  "description": "The dish description Jus",
+  "comments": [
+      {
+          "rating": "5",
+          "comment": "THe first comment",
+          "author": "John Lennon"
+      },
+      {
+          "rating": "4",
+          "comment": "THe second comment",
+          "author": "Beck Lennon"
+      }
+  ]
+}

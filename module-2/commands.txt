@@ -3,3 +3,4 @@
 3 -  npm install mongodb@3.0.10 --save
 4 -  npm install assert@1.4.1 --save
 5 -  npm install mongoose@5.1.7 --save
+6 -  npm install mongoose@5.1.7 mongoose-currency@0.2.0 --save
