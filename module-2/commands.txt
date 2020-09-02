@@ -1,2 +1,5 @@
-sudo npm install -g express-generator@4.16.0
-express confusionServer
+1 -  sudo npm install -g express-generator@4.16.0
+2 -  express confusionServer
+3 -  npm install mongodb@3.0.10 --save
+4 -  npm install assert@1.4.1 --save
+5 -  
