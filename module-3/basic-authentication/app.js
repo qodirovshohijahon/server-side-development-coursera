@@ -1,24 +1,24 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var fs = require('fs')
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var passport = require('passport')
+var authenticate = require('./authencticate')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var promoRouter = require('./routes/promoRouter')
 var leaderRouter = require('./routes/leaderRouter');
 var dishRouter = require('./routes/dishRouter')
-
-
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 var app = express();
 
 const mongoose = require('mongoose');
 
 const Promotions = require('./models/promotions')
 const Leaders = require('./models/leaders');
-const { dir } = require('console');
-
 const url = 'mongodb://localhost:27017/assignment-2';
 const connect = mongoose.connect(url)
 
@@ -37,46 +37,31 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('12345-67890-09876-54321'));
 
+app.use(session({
+  name: 'seesion-id',
+  secret: '12345-67890-09876-54321',
+  saveUninitialed: false,
+  resave: false,
+  store: new FileStore()
+}));
+
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// function auth(req, res, next) {
-//   console.log(req.signedCookies);
-
-//   if (!req.session.user) {
-//     var err = new Error('You are not authenticated!')
-//     err.status  = 401;
-//     return next(err);
-//   } else {
-//     if (req.session.user === 'authenticated') {
-//       next();
-//     }
-//     else {
-//       var err = new Error('You are not authenticated!')
-//       err.status  = 403;
-//       return next(err);
-//     }
-//   }
-// }
 
 function auth (req, res, next) {
-  console.log(req.session);
 
-if(!req.session.user) {
-    var err = new Error('You are not authenticated!');
-    err.status = 403;
-    return next(err);
-}
-else {
-  if (req.session.user === 'authenticated') {
-    next();
+  if(!req.user) {
+      var err = new Error('You are not authenticated!');
+      err.status = 403;
+      return next(err);
   }
   else {
-    var err = new Error('You are not authenticated!');
-    err.status = 403;
-    return next(err);
+      next();
   }
-}
 }
 
   
